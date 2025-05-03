@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Hệ thống mã key</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 80px;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 300px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+    #result {
+      margin-top: 30px;
+      font-size: 20px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h2>Nhập key bí mật để xem nội dung</h2>
+  <input type="text" id="keyInput" placeholder="Nhập mã key tại đây">
+  <button onclick="checkKey()">Xác nhận</button>
+  <div id="result"></div>
+
+  <script>
+    function checkKey() {
+      const key = document.getElementById('keyInput').value.trim();
+      const resultDiv = document.getElementById('result');
+
+      switch (key) {
+        case 'ntrkhangnek17381643':
+          resultDiv.textContent = '🎉 Bạn đã nhập đúng key ! Bí mật: 1';
+          break;
+        case 'LLMeows1847144218':
+          resultDiv.textContent = '🎉 Bạn đã nhập đúng key ! bí mật là:Miko 1 năm chưa tắm';
+          break;
+        case 'Miko3617483431':
+          resultDiv.textContent = '🎉 Bạn đã nhập đúng key ! bí mật là: LLMews 1 năm chưa tắm';
+          break;
+        default:
+          resultDiv.textContent = '❌ Mã key không đúng. Vui lòng thử lại.';
+          resultDiv.style.color = 'red';
+      }
+    }
+  </script>
+</body>
+</html>
